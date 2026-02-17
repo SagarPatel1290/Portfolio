@@ -148,9 +148,22 @@
             border-radius: 5px;
             font-weight: bold;
             margin-top: 15px;
+            margin-right: 5px;
+            margin-left: 5px;
             transition: background 0.3s;
         }
         .btn:hover { background: var(--primary); }
+        
+        /* Special style for Download Button */
+        .btn-download {
+            background-color: #ef4444; /* Red color to stand out */
+            font-size: 1.1rem;
+            padding: 12px 30px;
+            box-shadow: 0 4px 6px rgba(239, 68, 68, 0.3);
+        }
+        .btn-download:hover {
+            background-color: #dc2626;
+        }
 
         @media (max-width: 768px) {
             header { padding: 2rem 15px; }
@@ -165,7 +178,7 @@
             
             .grid-2, .grid-projects { grid-template-columns: 1fr; }
             
-            .btn-small { display: block; width: 100%; margin-right: 0; }
+            .btn-small, .btn { display: block; width: 100%; margin: 10px 0 0 0; }
         }
     </style>
 </head>
@@ -187,6 +200,18 @@
         <h2>Professional Summary</h2>
         <p>A dedicated tech professional and BCA candidate (2025) passionate about bridging the gap between theoretical computer science and practical web development. With a strong foundation in programming languages (C, C++, Java, PHP) and web technologies (HTML, CSS, JavaScript), I am eager to contribute as a <strong>Computer Educator</strong> to mentor the next generation of tech talent, or as a <strong>Web Developer</strong> building robust digital solutions.</p>
         <p style="margin-top: 10px;">My 13+ years of professional experience in technical operations have equipped me with exceptional problem-solving skills, leadership, and the ability to train and supervise teams effectively.</p>
+        
+        <div style="text-align: center; margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            
+            <a href="Sagar_Patel_Resume.pdf" download="Sagar_Patel_Resume.pdf" class="btn btn-download" style="margin: 0;">
+                📄 Download Resume
+            </a>
+            
+            <a href="https://www.linkedin.com/in/sagar-patel-dev" target="_blank" class="btn" style="background-color: #24A0ED; margin: 0; padding: 12px 30px; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(36, 160, 237, 0.3);">
+                💼 LinkedIn Profile
+            </a>
+            
+        </div>
     </section>
 
     <section>
@@ -308,9 +333,10 @@
             <strong>Email:</strong> <a href="mailto:sagarp451@gmail.com" style="color: var(--accent); text-decoration: none; font-weight: bold;">sagarp451@gmail.com</a>
         </p>
         
+        <a href="Sagar_Patel_Resume.pdf" download="Sagar_Patel_Resume.pdf" class="btn" style="background-color: #ef4444;">📄 Download Resume</a>
         <a href="mailto:sagarp451@gmail.com" class="btn">✉️ Send an Email</a>
         <a href="tel:+919428902507" class="btn" style="background-color: #10b981;">📞 Call Me Now</a>
-        <a href="https://www.linkedin.com/in/sagar-patel-dev" target="_blank" class="btn" style="background-color: #24A0ED;">💼 LinkedIn Profile</a>
+        <a href="https://www.linkedin.com/in/sagar-patel-dev" target="_blank" class="btn" style="background-color: #24A0ED;">💼 LinkedIn</a>
     </section>
 
 </div>
