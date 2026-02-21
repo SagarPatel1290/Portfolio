@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sagar Patel - Educator & Web Developer</title>
+    <title>Sagar Patel - Computer Educator, Web Developer & IT Expert</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
             box-sizing: border-box;
@@ -114,6 +115,21 @@
             font-weight: 600;
         }
 
+        /* Badge for Client Project */
+        .badge-client {
+            background-color: #16a34a; /* Green color */
+            color: white;
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin-left: 8px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
         ul { padding-left: 20px; margin-top: 10px; }
         li { margin-bottom: 8px; }
 
@@ -139,8 +155,13 @@
         }
 
         .contact { text-align: center; }
+        
+        /* General Button Styling */
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             background: var(--accent);
             color: white;
             padding: 12px 25px;
@@ -150,19 +171,35 @@
             margin-top: 15px;
             margin-right: 5px;
             margin-left: 5px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
-        .btn:hover { background: var(--primary); }
+        .btn:hover { background: var(--primary); transform: translateY(-2px); }
         
-        /* Special style for Download Button */
+        /* Custom Button Colors */
         .btn-download {
-            background-color: #ef4444; /* Red color to stand out */
-            font-size: 1.1rem;
-            padding: 12px 30px;
+            background-color: #ef4444; 
             box-shadow: 0 4px 6px rgba(239, 68, 68, 0.3);
         }
-        .btn-download:hover {
-            background-color: #dc2626;
+        .btn-download:hover { background-color: #dc2626; }
+
+        .btn-linkedin {
+            background-color: #0a66c2; 
+            box-shadow: 0 4px 6px rgba(10, 102, 194, 0.3);
+        }
+        .btn-linkedin:hover { background-color: #004182; }
+
+        .btn-whatsapp {
+            background-color: #10b981; 
+        }
+        .btn-whatsapp:hover { background-color: #059669; }
+
+        /* Top Button Container */
+        .top-btn-container {
+            display: flex; 
+            justify-content: center; 
+            gap: 15px; 
+            flex-wrap: wrap; 
+            margin-top: 25px;
         }
 
         @media (max-width: 768px) {
@@ -178,7 +215,10 @@
             
             .grid-2, .grid-projects { grid-template-columns: 1fr; }
             
-            .btn-small, .btn { display: block; width: 100%; margin: 10px 0 0 0; }
+            .btn-small { display: inline-block; margin: 10px 5px 0 0; } 
+            
+            .btn { display: flex; width: 100%; margin: 10px 0 0 0; }
+            .top-btn-container { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
@@ -189,7 +229,7 @@
         <img src="profile.png" alt="Sagar Patel" class="profile-img">
         <div class="header-text">
             <h1>Sagar Patel</h1>
-            <p>Computer Educator | Web Developer</p>
+            <p>Computer Educator | Web & Android Developer | IT Expert</p>
         </div>
     </div>
 </header>
@@ -198,38 +238,41 @@
 
     <section>
         <h2>Professional Summary</h2>
-        <p>A dedicated tech professional and BCA candidate (2025) passionate about bridging the gap between theoretical computer science and practical web development. With a strong foundation in programming languages (C, C++, Java, PHP) and web technologies (HTML, CSS, JavaScript), I am eager to contribute as a <strong>Computer Educator</strong> to mentor the next generation of tech talent, or as a <strong>Web Developer</strong> building robust digital solutions.</p>
-        <p style="margin-top: 10px;">My 13+ years of professional experience in technical operations have equipped me with exceptional problem-solving skills, leadership, and the ability to train and supervise teams effectively.</p>
+        <p>Dedicated tech professional and <strong>BCA candidate (2025)</strong> with experience in building <strong>live client solutions</strong> and robust database systems. Backed by <strong>13+ years of leadership</strong> and technical operations experience, I possess a unique blend of analytical problem-solving, team mentorship, and structured data management skills. Eager to leverage technical expertise as a <strong>Web Developer</strong> or to mentor the next generation as a <strong>Computer Educator</strong>.</p>
         
-        <div style="text-align: center; margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            
+        <div class="top-btn-container">
             <a href="Sagar_Patel_Resume.pdf" download="Sagar_Patel_Resume.pdf" class="btn btn-download" style="margin: 0;">
-                📄 Download Resume
+                <i class="fas fa-file-pdf" style="font-size: 1.2rem;"></i> Download Resume
             </a>
             
-            <a href="https://www.linkedin.com/in/sagar-patel-dev" target="_blank" class="btn" style="background-color: #24A0ED; margin: 0; padding: 12px 30px; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(36, 160, 237, 0.3);">
-                💼 LinkedIn Profile
+            <a href="https://www.linkedin.com/in/sagar-patel-dev" target="_blank" class="btn btn-linkedin" style="margin: 0;">
+                <i class="fab fa-linkedin" style="font-size: 1.3rem;"></i> LinkedIn Profile
             </a>
-            
         </div>
     </section>
 
     <section>
         <h2>Education & Qualifications</h2>
         <div class="grid-2">
+            
             <div class="card">
                 <h3>Bachelor of Computer Applications (BCA)</h3>
-                <p><strong>Dr. Babasaheb Ambedkar Open University</strong> | <em>2025</em></p>
-                <p style="margin-top: 8px;">Core focus on Programming, Web Development, and Database Management Systems.</p>
+                <p><strong>Dr. Babasaheb Ambedkar Open University</strong> | <em>July 2025 (Expected)</em></p>
+                <p style="margin-top: 8px;">Completed with <strong>7.94 CGPA</strong>. Core focus on Programming, Web Development, and Database Management Systems.</p>
             </div>
+            
             <div class="card">
                 <h3>Diploma in Radiology Technology</h3>
-                <p><strong>Bharat Sevak Samaj</strong> | <em>2011</em></p>
+                <p><strong>Bharat Sevak Samaj</strong> | <em>May 2011</em></p>
+                <p style="margin-top: 8px;">Completed with <strong>73.11%</strong>. Gained hands-on expertise in medical imaging technologies, equipment operations, and accurate patient data management.</p>
             </div>
+            
             <div class="card">
-                <h3>Bachelor of Commerce</h3>
-                <p><strong>Gujarat University</strong> | <em>2010</em></p>
+                <h3>Bachelor of Commerce (B.Com)</h3>
+                <p><strong>Gujarat University</strong> | <em>March 2007</em></p>
+                <p style="margin-top: 8px;">Completed with <strong>62.14%</strong>. Developed a strong foundation in business management, organizational operations, and financial record-keeping.</p>
             </div>
+
         </div>
     </section>
 
@@ -237,11 +280,15 @@
         <h2>Technical Proficiency</h2>
         <div style="margin-bottom: 15px;">
             <strong style="display: block; margin-bottom: 5px;">Web Development:</strong> 
-            <span class="tag">HTML5</span> <span class="tag">CSS3</span> <span class="tag">JavaScript</span> <span class="tag">PHP</span>
+            <span class="tag">HTML5</span> <span class="tag">CSS3</span> <span class="tag">JavaScript</span> <span class="tag">PHP</span> <span class="tag">API Integration</span>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <strong style="display: block; margin-bottom: 5px;">App Development:</strong> 
+            <span class="tag">Android</span> <span class="tag">Android Studio</span>
         </div>
         <div style="margin-bottom: 15px;">
             <strong style="display: block; margin-bottom: 5px;">Programming Languages:</strong> 
-            <span class="tag">C</span> <span class="tag">C++</span> <span class="tag">Java</span>
+            <span class="tag">Java</span> <span class="tag">C</span> <span class="tag">C++</span>
         </div>
         <div style="margin-bottom: 15px;">
             <strong style="display: block; margin-bottom: 5px;">Databases & OS:</strong> 
@@ -250,67 +297,62 @@
     </section>
 
     <section>
-        <h2>Academic & Web Projects</h2>
+        <h2>Featured Projects</h2>
         <div class="grid-projects">
             
             <div class="card">
-                <h3>Blood Bank & Donor Management System</h3>
+                <h3>
+                    Shiv Chula Dosa Hub
+                    <span class="badge-client">Live Client Project</span>
+                </h3>
+                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+                <p style="margin-top: 8px;">Developed a digital QR Menu solution for a real-world client. Features include a fully responsive UI and QR code integration.</p>
+                <div>
+                    <a href="https://github.com/SagarPatel1290/Shiv-Chula-Dosa-Hub.git" target="_blank" class="btn-small">💻 View Code</a>
+                    <a href="https://shivchuladosahub.netlify.app/" target="_blank" class="btn-small">🚀 Live Demo</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Blood Bank & Donor System</h3>
                 <p><strong>Tech Stack:</strong> PHP, MySQL, HTML/CSS</p>
-                <p style="margin-top: 8px;">Engineered a secure platform to track blood inventory, manage donor profiles, and streamline hospital requests with real-time database updates.</p>
+                <p style="margin-top: 8px;">A healthcare application to manage blood inventory. Handles complex logic for matching and real-time availability.</p>
                 <div>
                     <a href="https://github.com/SagarPatel1290/Blood-Bank-Donor-Management-System.git" target="_blank" class="btn-small">💻 View Code</a>
+                    <a href="https://bbdms.gt.tc/" target="_blank" class="btn-small">🚀 Live Demo</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3>Online Car Rental System</h3>
-                <p><strong>Tech Stack:</strong> PHP, MySQL, JavaScript</p>
-                <p style="margin-top: 8px;">Designed a dynamic vehicle booking system featuring inventory tracking, user authentication, and dynamic pricing calculation logic.</p>
+                <h3>Currency Converter & UI Tools</h3>
+                <p><strong>Tech Stack:</strong> JavaScript, API Integration, CSS</p>
+                <p style="margin-top: 8px;">Functional web tools including a <strong>Currency Converter</strong> using live Exchange Rate API and DOM manipulation.</p>
                 <div>
-                    <a href="https://github.com/SagarPatel1290/Online-Car-Rental-System.git" target="_blank" class="btn-small">💻 View Code</a>
+                    <a href="https://github.com/SagarPatel1290/Currency-Converter.git" target="_blank" class="btn-small">💻 View Code</a>
+                    <a href="https://currencyconverternet.netlify.app/" target="_blank" class="btn-small">🚀 Live Demo</a>
                 </div>
             </div>
 
-            <div class="card">
-                <h3>Hospital Management System</h3>
-                <p><strong>Tech Stack:</strong> PHP, MySQL, HTML</p>
-                <p style="margin-top: 8px;">Developed a full-stack web application for storing and retrieving patient records. Implemented secure database connections and an intuitive UI.</p>
-                <div>
-                    <a href="https://github.com/SagarPatel1290/Hospital-Management-System.git" target="_blank" class="btn-small">💻 View Code</a>
-                </div>
-            </div>
-            
             <div class="card">
                 <h3>University Management System</h3>
-                <p><strong>Tech Stack:</strong> Java, MySQL</p>
-                <p style="margin-top: 8px;">Created a structured database system to handle student data, integrating complex search, update, and reporting functionalities.</p>
+                <p><strong>Tech Stack:</strong> Java (Swing), MySQL</p>
+                <p style="margin-top: 8px;">Desktop application for managing university data including records and fee structures with authentication.</p>
                 <div>
                     <a href="https://github.com/SagarPatel1290/University-Management-System.git" target="_blank" class="btn-small">💻 View Code</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3>Employee Management System</h3>
-                <p><strong>Tech Stack:</strong> Java, MySQL</p>
-                <p style="margin-top: 8px;">Focused on secure internal data operations and comprehensive reporting for structured employee records maintenance.</p>
+                <h3>Tic-Tac-Toe Android Game</h3>
+                <p><strong>Tech Stack:</strong> Java, Android Studio</p>
+                <p style="margin-top: 8px;">Interactive mobile game demonstrating Android Activity Lifecycle and UI Layouts (XML).</p>
                 <div>
-                    <a href="https://github.com/SagarPatel1290/Employee-Management-System.git" target="_blank" class="btn-small">💻 View Code</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3>Frontend Web Clones & UI</h3>
-                <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
-                <p style="margin-top: 8px;">Designed a responsive clone of the Amazon homepage and built an interactive Tic-Tac-Toe web application to demonstrate frontend logic.</p>
-                <div>
-                    <a href="https://github.com/SagarPatel1290/Frontend-Web-Clones-UI.git" target="_blank" class="btn-small">💻 View Code</a>
+                    <a href="https://github.com/SagarPatel1290/Tic-Tac-Toe-Android-Game.git" target="_blank" class="btn-small">💻 View Code</a>
                 </div>
             </div>
 
         </div>
     </section>
-
-    <section>
         <h2>Professional Experience & Leadership</h2>
         <div class="card" style="border-left: 5px solid var(--primary); border-top: none;">
             <h3>Senior Technical Operator & Supervisor</h3>
@@ -333,10 +375,18 @@
             <strong>Email:</strong> <a href="mailto:sagarp451@gmail.com" style="color: var(--accent); text-decoration: none; font-weight: bold;">sagarp451@gmail.com</a>
         </p>
         
-        <a href="Sagar_Patel_Resume.pdf" download="Sagar_Patel_Resume.pdf" class="btn" style="background-color: #ef4444;">📄 Download Resume</a>
-        <a href="mailto:sagarp451@gmail.com" class="btn">✉️ Send an Email</a>
-        <a href="tel:+919428902507" class="btn" style="background-color: #10b981;">📞 Call Me Now</a>
-        <a href="https://www.linkedin.com/in/sagar-patel-dev" target="_blank" class="btn" style="background-color: #24A0ED;">💼 LinkedIn</a>
+        <a href="Sagar_Patel_Resume.pdf" download="Sagar_Patel_Resume.pdf" class="btn btn-download">
+            <i class="fas fa-file-pdf"></i> Download Resume
+        </a>
+        <a href="mailto:sagarp451@gmail.com" class="btn">
+            <i class="fas fa-envelope"></i> Send an Email
+        </a>
+        <a href="tel:+919428902507" class="btn btn-whatsapp">
+            <i class="fas fa-phone-alt"></i> Call Me Now
+        </a>
+        <a href="https://www.linkedin.com/in/sagar-patel-dev" target="_blank" class="btn btn-linkedin">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
     </section>
 
 </div>
